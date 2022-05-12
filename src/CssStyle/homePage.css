@@ -3,13 +3,11 @@
     margin: 0;
     padding: 0;
 }
-body{
+.AppOptionContainer{
     background-image: url('../website_images/HomeBackground.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.AppOptionContainer{
     display: flex;
     flex-direction: column;
     min-height: 100vh;

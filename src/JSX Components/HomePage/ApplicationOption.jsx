@@ -24,18 +24,21 @@ export default function ApplicationOption() {
             info="In this u can find missing person using image and vdo survelliance. You'll also have the feature to register the missing person."
             link="https://google.com/"
             img={FindMissingPeople}
-          />
+            path = "/findmissingperson"
+            />
           <OptionCard
             head="Face Unlock System"
             info="In this u can find missing person using image and vdo survelliance. You'll also have the feature to register the missing person."
             link="https://google.com/"
             img={FaceLogin}
-          />
+            path = "/"
+            />
           <OptionCard
             head="Face Detection Game"
             info="In this u can find missing person using image and vdo survelliance. You'll also have the feature to register the missing person."
             link="https://google.com/"
             img={FaceDetectionGame}
+            path = "/"
           />
         </div>
       </div>
