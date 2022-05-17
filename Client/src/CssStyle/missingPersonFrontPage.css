@@ -1,0 +1,23 @@
+.FrontPageMissPerContainer{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #141e30, #243b55);
+
+}
+.RegButton{
+    margin-right: 2rem;
+}
+.SearchButton{
+    margin-left: 2rem;
+}
+.buttonTitle{
+    color: white !important;
+}
+.FrontPageMissPerContainer>.RegButton>.MuiBox-root>.MuiButtonBase-root>.css-vs27xc, .FrontPageMissPerContainer>.RegButton>.MuiBox-root>.MuiButtonBase-root>.MuiImageBackdrop-root{
+    border-radius: 10px;
+}
+.FrontPageMissPerContainer>.SearchButton>.MuiBox-root>.MuiButtonBase-root>.css-vs27xc, .FrontPageMissPerContainer>.SearchButton>.MuiBox-root>.MuiButtonBase-root>.MuiImageBackdrop-root{
+    border-radius: 10px;
+}
