@@ -56,7 +56,7 @@ export default function SearchForSusUsingImage() {
         const descriptions = [];
         for (let i = 1; i <= 3; i++) {
           const img = await faceapi.fetchImage(
-            `https://github.com/jatinverma14/Face-recognition-application/tree/main/Client/public/Uploads/${label}/${i}.jpg`
+            `https://github.com/jatinverma14/Face-recognition-application/tree/main/Client/public/Uploads/${label}/${i}.jpg`, {mode:'no-cors'}
           );
           const detections = await faceapi
             .detectSingleFace(img)

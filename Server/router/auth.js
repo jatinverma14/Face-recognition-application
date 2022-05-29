@@ -4,13 +4,9 @@ const cors = require("cors");
 const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
-const uploadFile = require("express-fileupload");
 const cloudinary = require("cloudinary").v2;
 router.use(cors());
 
-router.use(uploadFile({
-  useTempFiles: true
-}))
 router.use(express.static(__dirname + "./public/uploads/"));
 
 cloudinary.config({
