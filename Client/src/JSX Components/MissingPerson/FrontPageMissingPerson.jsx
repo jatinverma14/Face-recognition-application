@@ -20,7 +20,7 @@ export default function FrontPageMissingPerson() {
           <OptionButton title="REGISTER MISSING PERSON" img={RegisterMissing} />
         </span>
         <span className="SearchButton" onClick={()=>{
-          routeChange('/searchforsusoption')
+          routeChange('/searchforsus')
         }}>
           <OptionButton title="SEARCH FOR SUSPECT" img={SearchForSus} />
         </span>

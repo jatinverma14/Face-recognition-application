@@ -22,21 +22,18 @@ export default function ApplicationOption() {
           <OptionCard
             head="Find Mising Person"
             info="In this u can find missing person using image and vdo survelliance. You'll also have the feature to register the missing person."
-            link="https://google.com/"
             img={FindMissingPeople}
             path = "/findmissingperson"
             />
           <OptionCard
-            head="Face Unlock System"
-            info="In this u can find missing person using image and vdo survelliance. You'll also have the feature to register the missing person."
-            link="https://google.com/"
+            head="Face Expressions"
+            info="In this, you can see the face detection and expressions of the human"
             img={FaceLogin}
-            path = "/"
+            path = "/searchforsususingvid"
             />
           <OptionCard
             head="Face Detection Game"
-            info="In this u can find missing person using image and vdo survelliance. You'll also have the feature to register the missing person."
-            link="https://google.com/"
+            info="Not developed yet! I will be developing this after some time"
             img={FaceDetectionGame}
             path = "/"
           />

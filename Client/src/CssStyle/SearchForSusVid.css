@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Dancing+Script:wght@600;700&family=Estonia&family=Libre+Baskerville&family=Lora:ital@1&family=Mochiy+Pop+P+One&family=Playfair+Display:wght@500&display=swap');
+.seachVidButton{
+    cursor: pointer;
+    font-size: 1.5rem !important;
+    color: white !important;
+    font-family: 'Playfair Display', serif !important;
+    margin-top: 1rem !important;
+    background-color: green !important;
+}
+.modelLoad{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
