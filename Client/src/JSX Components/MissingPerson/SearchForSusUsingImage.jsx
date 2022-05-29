@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as faceapi from "face-api.js";
-import axios from "axios";
+// import axios from "axios";
 import "../../CssStyle/regMissPer.css";
 
 export default function SearchForSusUsingImage() {
@@ -37,6 +37,9 @@ export default function SearchForSusUsingImage() {
 
   const search = async (e) => {
     e.preventDefault();
+    const labeledFaceDescriptors = await uploadedImages();
+    const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6);
+    console.log(faceMatcher);
     const image = await faceapi.bufferToImage(susImg);
     if (!image) return Error;
     const detections = await faceapi
@@ -44,11 +47,26 @@ export default function SearchForSusUsingImage() {
       .withFaceLandmarks()
       .withFaceDescriptors();
     if (!detections) return Error;
-    uploadedImages()
   };
 
   const uploadedImages = () => {
-    
+    const labels = ["Amir", "Deepika", "Hrithik", "John", "Roman", "Salman"];
+    return Promise.all(
+      labels.map(async (label) => {
+        const descriptions = [];
+        for (let i = 1; i <= 3; i++) {
+          const img = await faceapi.fetchImage(
+            `https://github.com/jatinverma14/Face-recognition-application/tree/main/Client/public/Uploads/${label}/${i}.jpg`
+          );
+          const detections = await faceapi
+            .detectSingleFace(img)
+            .withFaceLandmarks()
+            .withFaceDescriptors();
+          descriptions.push(detections.descriptor)
+        }
+        return new faceapi.LabeledFaceDescriptors(label, descriptions);
+      })
+    );
   };
 
   return (
