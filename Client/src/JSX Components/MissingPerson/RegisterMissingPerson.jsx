@@ -101,7 +101,7 @@ export default function RegisterMissingPerson() {
             <label>Your email id</label>
           </div>
           <div className="form_inputs">
-            <span>Missing person's image {`(max size: 120kb)`}</span>
+            <span>Missing person's image</span>
             <input type="file" onChange={handleChange("missPerImg")} />
           </div>
           <button onClick={() => postData(formData)} className="form_button">
